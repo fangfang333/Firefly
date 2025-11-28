@@ -30,26 +30,12 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
       animationDelay: 0,
     },
     {
-      // 组件类型：公告组件
-      type: "announcement",
-      // 是否启用该组件
-      enable: true,
-      // 组件显示顺序
-      order: 2,
-      // 组件位置
-      position: "top",
-      // CSS 类名
-      class: "onload-animation",
-      // 动画延迟时间
-      animationDelay: 50,
-    },
-    {
       // 组件类型：分类组件
       type: "categories",
       // 是否启用该组件
       enable: true,
       // 组件显示顺序
-      order: 3,
+      order: 2,
       // 组件位置
       position: "sticky",
       // CSS 类名
@@ -63,23 +49,18 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
       },
     },
     {
-      // 组件类型：标签组件
-      type: "tags",
+      // 组件类型：公告组件
+      type: "announcement",
       // 是否启用该组件
       enable: true,
       // 组件显示顺序
-      order: 4,
+      order: 3,
       // 组件位置
       position: "sticky",
       // CSS 类名
       class: "onload-animation",
       // 动画延迟时间
-      animationDelay: 250,
-      // 响应式配置
-      responsive: {
-        // 折叠阈值：当标签数量超过20个时自动折叠
-        collapseThreshold: 20,
-      },
+      animationDelay: 50,
     },
     {
       // 组件类型：广告栏组件 1
@@ -102,14 +83,33 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
   // 右侧边栏组件配置列表
   rightComponents: [
     {
-      // 组件类型：站点统计组件
-      type: "stats",
+      // 组件类型：标签组件
+      type: "tags",
       // 是否启用该组件
       enable: true,
       // 组件显示顺序
       order: 1,
       // 组件位置
-      position: "top",
+      position: "sticky",
+      // CSS 类名
+      class: "onload-animation",
+      // 动画延迟时间
+      animationDelay: 250,
+      // 响应式配置
+      responsive: {
+        // 折叠阈值：当标签数量超过20个时自动折叠
+        collapseThreshold: 20,
+      },
+    },
+    {
+      // 组件类型：站点统计组件
+      type: "stats",
+      // 是否启用该组件
+      enable: false,
+      // 组件显示顺序
+      order: 3,
+      // 组件位置
+      position: "sticky",
       // 是否在文章详情页显示
       showOnPostPage: true,
       // CSS 类名
@@ -155,7 +155,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
       // 是否启用该组件
       enable: false,
       // 组件显示顺序
-      order: 4,
+      order: 5,
       // 组件位置
       position: "sticky",
       // 是否在文章详情页显示

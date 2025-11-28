@@ -6,19 +6,23 @@ import { fontConfig } from "./fontConfig";
 const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
+// 网站标题
   title: "Firefly",
-  subtitle: "Demo site",
-  site_url: "https://firefly.cuteleaf.cn",
+// 网站副标题
+  subtitle: "fang523",
+  site_url: "https://www.pidex.top/",
+// 网站描述
   description:
-    "Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。",
+    "这个网站目前用作fang523的记事本，也可能发一些简单的教程，允许转载(需要注明来源)，喜欢的话请点一下收藏！",
+// SEO关键词
   keywords: [
+    "fang523",
     "Firefly",
     "Fuwari",
     "Astro",
     "ACGN",
     "博客",
     "技术博客",
-    "静态博客",
   ],
 
   lang: SITE_LANG,
@@ -51,15 +55,15 @@ export const siteConfig: SiteConfig = {
   navbarTitle: "Firefly", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
 
   // 站点开始日期，用于统计运行天数
-  siteStartDate: "2025-01-01", // 请修改为你的站点实际开始日期，格式：YYYY-MM-DD
+  siteStartDate: "2024-07-22", // 请修改为你的站点实际开始日期，格式：YYYY-MM-DD
 
   // bangumi配置
   bangumi: {
-    userId: "1163581", // 在此处设置你的Bangumi用户ID
+    userId: "", // 在此处设置你的Bangumi用户ID
   },
 
   // 文章页底部的"上次编辑时间"卡片开关
-  showLastModified: true,
+  showLastModified: false,
 
   // OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
   generateOgImages: false,
@@ -67,7 +71,7 @@ export const siteConfig: SiteConfig = {
   // 页面开关配置 - 控制特定页面的访问权限，设为false会返回404
   // bangumi的数据为编译时获取的，所以不是实时数据，请配置bangumi.userId
   pages: {
-    sponsor: true, // 赞助页面开关
+    sponsor: false, // 赞助页面开关
     guestbook: true, // 留言板页面开关，需要配置评论系统
     bangumi: true, // 番组计划页面开关，含追番和游戏，dev调试时只获取一页数据，build才会获取全部数据
   },
@@ -89,7 +93,7 @@ export const siteConfig: SiteConfig = {
 
   backgroundWallpaper: {
     // 壁纸模式："banner" 横幅壁纸，"overlay" 全屏壁纸，"none" 纯色背景无壁纸
-    mode: "banner",
+    mode: "overlay",
     // 是否允许用户通过导航栏切换壁纸模式，设为false可提升性能（只渲染当前模式）
     switchable: true,
 
